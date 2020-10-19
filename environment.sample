@@ -1,0 +1,5 @@
+# This constructs a Git URI base like ssh://git@workplaceserver:port/
+UPSTREAM_USER=git
+UPSTREAM_HOST=workplaceserver
+UPSTREAM_PORT=port
+MY_PUBLIC_KEY=ssh-rsa AAAAoBAZe...== me@home

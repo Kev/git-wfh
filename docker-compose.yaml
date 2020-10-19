@@ -1,0 +1,11 @@
+version: '3'
+services:
+  proxy:
+    restart: always
+    image: git-wfh
+    volumes:
+    - ./repositories:/repositories
+    env_file:
+      environment
+    ports:
+      - "9022:22"
