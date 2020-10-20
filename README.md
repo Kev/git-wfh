@@ -17,7 +17,9 @@ you can fetch from the proxy, and push directly to the workplace
 server.
 
 ## Building the Image
+
 `docker build -t git-wfh .`
+
 ## Running the Proxy
 
 To use the `docker-compose.yaml` file copy `environment.sample` to `environment`, edit to configure for your deployment, and then
@@ -41,3 +43,7 @@ git config --global url.ssh://git@workplace:22/.pushInsteadOf ssh://git@workplac
 ## Problems
 
 If your process gets destroyed in the middle of a checkout and you end up with a broken repository, just delete the relevant half-baked repository manually and let it recover on next fetch.
+
+## Alternatives
+
+Other Git mirroring solutions exist, although the ones I found didn't do quite what I wanted. One might also consider https://github.com/opensafely/git-server-proxy  or https://github.com/guillon/git-mirror.
