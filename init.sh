@@ -13,6 +13,14 @@ sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_
 useradd -m -s /git-proxy.py git
 mkdir -p ~git/.ssh
 echo $MY_PUBLIC_KEY > ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY2 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY3 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY4 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY5 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY6 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY7 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY8 >> ~git/.ssh/authorized_keys
+echo $MY_PUBLIC_KEY9 >> ~git/.ssh/authorized_keys
 echo "Host = $UPSTREAM_HOST
 StrictHostKeyChecking = accept-new" > ~git/.ssh/config
 chown -R git:git ~git/.ssh
