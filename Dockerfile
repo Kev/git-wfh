@@ -1,6 +1,6 @@
-FROM debian:10
+FROM ubuntu:22.04
 
-RUN apt-get update && apt-get -y dist-upgrade && apt-get install -y openssh-server git-core python3 && apt-get clean
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade && DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server git-core python3 && apt-get clean
 
 ADD init.sh /tmp/init.sh
 RUN chmod u+rwx /tmp/init.sh
